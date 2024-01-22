@@ -1,0 +1,25 @@
+@import 'Nav/Nav.scss';
+@import 'intro/Intro.scss';
+@import 'hmeheader/hmeheader.scss';
+@import '3D/3D.scss';
+@import 'Studio/Studio.scss';
+@import 'Footer/Footer.scss';
+@import 'Card/Card.scss';
+@import 'Label/Label.scss';
+@import 'Contacts/Contacts.scss';
+@import 'Beat/Beat.scss';
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    @apply p-0 box-border
+}
