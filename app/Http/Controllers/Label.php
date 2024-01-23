@@ -15,14 +15,16 @@ class Label extends Controller
         $banner = DB::table('banner')->where('banner.page', 'label')->get();
         $cards = DB::table('label_cards')->get();
         $header = DB::table('label_header')->get();
-        return view('label', ['banner' => $banner, 'cards' => $cards, 'header' => $header]);
+        $socialNetworks = DB::table('social')->get();
+        return view('label', ['banner' => $banner, 'cards' => $cards, 'header' => $header, 'socialNetworks' => $socialNetworks]);
     }
 
     public function admin_index(Request $request)
     {
         $cards = DB::table('label_cards')->get();
         $header = DB::table('label_header')->get();
-        return view('admin.label.index', ['cards' => $cards, 'header' => $header]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.label.index', ['cards' => $cards, 'header' => $header, 'socialNetworks' => $socialNetworks]);
     }
 
     // <--------------------CARDS-------------------->
@@ -31,8 +33,9 @@ class Label extends Controller
     {
         $id = $request->id;
         $cards = DB::table('label_cards')->where('label_cards.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($cards)) {
-            return view('admin.label.cards', ['cards' => $cards]);
+            return view('admin.label.cards', ['cards' => $cards, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }
@@ -77,7 +80,8 @@ class Label extends Controller
     public function createCardsView(Request $request)
     {
         $cards = DB::table('label_cards')->get();
-        return view('admin.label.create_cards', ['cards' => $cards]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.label.create_cards', ['cards' => $cards, 'socialNetworks' => $socialNetworks]);
     }
 
     public function createCards(Request $request)
@@ -121,8 +125,9 @@ class Label extends Controller
     {
         $id = $request->id;
         $header = DB::table('label_header')->where('label_header.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($header)) {
-            return view('admin.label.header', ['header' => $header]);
+            return view('admin.label.header', ['header' => $header, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }

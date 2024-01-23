@@ -94,60 +94,14 @@
 
                     <div class="" style="display: flex; flex-direction: column;">
                         <ul class="social-icons">
-                            <li>
-                                <a class="facebook" href="#"
-                                    style="display: flex; justify-content: center; align-items: center; text-decoration: none; cursor: pointer;">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="twitter" href="#"
-                                    style="display: flex; justify-content: center; align-items: center; text-decoration: none; cursor: pointer;">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dribbble" href="#"
-                                    style="display: flex; justify-content: center; align-items: center; text-decoration: none; cursor: pointer;">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="youtube" href="#"
-                                    style="display: flex; justify-content: center; align-items: center; text-decoration: none; cursor: pointer;">
-                                    <i class="fa fa-youtube"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="tiktok" href="#"
-                                    style="display: flex; justify-content: center; align-items: center; text-decoration: none; cursor: pointer;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
-                                        fill="#fff"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                        <path
-                                            d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="spotify" href="#"
-                                    style="display: flex; justify-content: center; align-items: center; text-decoration: none; cursor: pointer;">
-                                    <i class="fa fa-spotify"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="youtube" href="#"
-                                    style="display: flex; justify-content: center; align-items: center; text-decoration: none; cursor: pointer;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        viewBox="0 0 27 27" fill="none">
-                                        <path
-                                            d="M19.1815 13.495L15.5753 14.709V18.6321L13.3396 15.4615L9.73337 16.6656L11.969 13.495L9.73337 10.3344L13.3396 11.5385L15.5753 8.36789V12.291L19.1815 13.495Z"
-                                            fill="#fff" />
-                                        <path
-                                            d="M19.1815 13.495V21.6823H7.88651V5.16722H19.1815V13.495L24.1875 11.8194V3.19063L21.2811 0H2.8125V27H21.2617L24.1875 23.9799V15.1806L19.1815 13.495Z"
-                                            fill="#fff" />
-                                    </svg>
-                                </a>
-                            </li>
+                            @foreach ($socialNetworks as $item)
+                                <li>
+                                    <a class="{{ $item->name }}" href="#"
+                                        style="display: flex; justify-content: center; align-items: center; text-decoration: none; cursor: pointer;">
+                                        {!! $item->icon !!}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

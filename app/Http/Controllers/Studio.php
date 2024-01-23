@@ -17,7 +17,8 @@ class Studio extends Controller
         $cards = DB::table('studio_cards')->get();
         $list = DB::table('studio_list')->get();
         $person = DB::table('studio_person')->get();
-        return view('studio', ['banner_1' => $banner_1, 'banner_2' => $banner_2, 'cards' => $cards, 'list' => $list, 'person' => $person]);
+        $socialNetworks = DB::table('social')->get();
+        return view('studio', ['banner_1' => $banner_1, 'banner_2' => $banner_2, 'cards' => $cards, 'list' => $list, 'person' => $person, 'socialNetworks' => $socialNetworks]);
     }
 
     public function admin_index(Request $request)
@@ -25,7 +26,8 @@ class Studio extends Controller
         $cards = DB::table('studio_cards')->get();
         $list = DB::table('studio_list')->get();
         $person = DB::table('studio_person')->get();
-        return view('admin.studio.index', ['cards' => $cards, 'list' => $list, 'person' => $person]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.studio.index', ['cards' => $cards, 'list' => $list, 'person' => $person, 'socialNetworks' => $socialNetworks]);
     }
 
     // <--------------------CARDS-------------------->
@@ -34,8 +36,9 @@ class Studio extends Controller
     {
         $id = $request->id;
         $cards = DB::table('studio_cards')->where('studio_cards.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($cards)) {
-            return view('admin.studio.cards', ['cards' => $cards]);
+            return view('admin.studio.cards', ['cards' => $cards, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }
@@ -76,8 +79,9 @@ class Studio extends Controller
     {
         $id = $request->id;
         $list = DB::table('studio_list')->where('studio_list.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($list)) {
-            return view('admin.studio.list', ['list' => $list]);
+            return view('admin.studio.list', ['list' => $list, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }
@@ -119,8 +123,9 @@ class Studio extends Controller
     {
         $id = $request->id;
         $person = DB::table('studio_person')->where('studio_person.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($person)) {
-            return view('admin.studio.person', ['person' => $person]);
+            return view('admin.studio.person', ['person' => $person, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }

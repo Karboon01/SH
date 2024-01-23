@@ -10,15 +10,17 @@ class Users extends Controller
     public function admin_index(Request $request)
     {
         $users = DB::table('users')->get();
-        return view('admin.users.index', ['users' => $users]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.users.index', ['users' => $users, 'socialNetworks' => $socialNetworks]);
     }
 
     public function getUserById(Request $request)
     {
         $id = $request->id;
         $user = DB::table('users')->where('users.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($user)) {
-            return view('admin.users.user', ['user' => $user]);
+            return view('admin.users.user', ['user' => $user, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }

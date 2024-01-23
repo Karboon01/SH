@@ -14,13 +14,15 @@ class Services extends Controller
     {
         $banner = DB::table('banner')->where('banner.page', 'services')->get();
         $cards = DB::table('services_cards')->get();
-        return view('services', ['banner' => $banner, 'cards' => $cards]);
+        $socialNetworks = DB::table('social')->get();
+        return view('services', ['banner' => $banner, 'cards' => $cards, 'socialNetworks' => $socialNetworks]);
     }
 
     public function admin_index(Request $request)
     {
         $cards = DB::table('services_cards')->get();
-        return view('admin.services.index', ['cards' => $cards]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.services.index', ['cards' => $cards, 'socialNetworks' => $socialNetworks]);
     }
 
     // <--------------------CARDS-------------------->
@@ -29,8 +31,9 @@ class Services extends Controller
     {
         $id = $request->id;
         $cards = DB::table('services_cards')->where('services_cards.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($cards)) {
-            return view('admin.services.cards', ['cards' => $cards]);
+            return view('admin.services.cards', ['cards' => $cards, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }

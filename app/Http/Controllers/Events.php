@@ -14,14 +14,16 @@ class Events extends Controller
     {
         $news = DB::table('events_news')->get();
         $person = DB::table('events_person')->get();
-        return view('events', ['news' => $news, 'person' => $person]);
+        $socialNetworks = DB::table('social')->get();
+        return view('events', ['news' => $news, 'person' => $person, 'socialNetworks' => $socialNetworks]);
     }
 
     public function admin_index(Request $request)
     {
         $news = DB::table('events_news')->get();
         $person = DB::table('events_person')->get();
-        return view('admin.events.index', ['news' => $news, 'person' => $person]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.events.index', ['news' => $news, 'person' => $person, 'socialNetworks' => $socialNetworks]);
     }
 
     // <--------------------NEWS-------------------->
@@ -30,8 +32,9 @@ class Events extends Controller
     {
         $id = $request->id;
         $news = DB::table('events_news')->where('events_news.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($news)) {
-            return view('admin.events.news', ['news' => $news]);
+            return view('admin.events.news', ['news' => $news, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }
@@ -80,7 +83,8 @@ class Events extends Controller
     public function createNewsView(Request $request)
     {
         $news = DB::table('events_news')->get();
-        return view('admin.events.create_news', ['news' => $news]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.events.create_news', ['news' => $news, 'socialNetworks' => $socialNetworks]);
     }
 
     public function createNews(Request $request)
@@ -141,8 +145,9 @@ class Events extends Controller
     {
         $id = $request->id;
         $person = DB::table('events_person')->where('events_person.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($person)) {
-            return view('admin.events.person', ['person' => $person]);
+            return view('admin.events.person', ['person' => $person, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }

@@ -17,7 +17,8 @@ class Main extends Controller
         $banner = DB::table('banner')->where('banner.page', 'main')->get();
         $music = DB::table('main_music')->get();
         $social = DB::table('social')->get();
-        return view('main', ['banner' => $banner, 'music' => $music, 'social' => $social]);
+        $socialNetworks = DB::table('social')->get();
+        return view('main', ['banner' => $banner, 'music' => $music, 'social' => $social, 'socialNetworks' => $socialNetworks]);
     }
 
     public function admin_index(Request $request)
@@ -25,7 +26,8 @@ class Main extends Controller
         $banner = DB::table('banner')->where('banner.page', 'main')->get();
         $music = DB::table('main_music')->get();
         $social = DB::table('social')->get();
-        return view('admin.main.index', ['banner' => $banner, 'music' => $music, 'social' => $social]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.main.index', ['banner' => $banner, 'music' => $music, 'social' => $social, 'socialNetworks' => $socialNetworks]);
     }
 
     // <--------------------MUSIC-------------------->
@@ -34,8 +36,9 @@ class Main extends Controller
     {
         $id = $request->id;
         $music = DB::table('main_music')->where('main_music.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($music)) {
-            return view('admin.main.music', ['music' => $music]);
+            return view('admin.main.music', ['music' => $music, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }
@@ -77,7 +80,8 @@ class Main extends Controller
     public function createMusicView(Request $request)
     {
         $music = DB::table('main_music')->get();
-        return view('admin.main.create_music', ['music' => $music]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.main.create_music', ['music' => $music, 'socialNetworks' => $socialNetworks]);
     }
 
     public function createMusic(Request $request)

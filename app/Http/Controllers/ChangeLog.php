@@ -13,8 +13,8 @@ class ChangeLog extends Controller
     public function admin_index(Request $request)
     {
         $change_log = DB::table('change_log')->orderBy('change_log.datetime', 'desc')->get();
-
-        return view('admin.change_log', ['change_log' => $change_log]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.change_log', ['change_log' => $change_log, 'socialNetworks' => $socialNetworks]);
     }
 
     public function recoverUser(Request $request)

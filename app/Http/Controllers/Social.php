@@ -13,13 +13,15 @@ class Social extends Controller
     public function index(Request $request)
     {
         $social = DB::table('social')->get();
-        return view('app', ['social' => $social]);
+        $socialNetworks = DB::table('social')->get();
+        return view('app', ['social' => $social, 'socialNetworks' => $socialNetworks]);
     }
 
     public function admin_index(Request $request)
     {
         $social = DB::table('social')->get();
-        return view('admin.social.index', ['social' => $social]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.social.index', ['social' => $social, 'socialNetworks' => $socialNetworks]);
     }
 
     // <--------------------SOCIAL-------------------->
@@ -28,8 +30,9 @@ class Social extends Controller
     {
         $id = $request->id;
         $social = DB::table('social')->where('social.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($social)) {
-            return view('admin.social.social_edit', ['social' => $social]);
+            return view('admin.social.social_edit', ['social' => $social, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }
@@ -71,7 +74,8 @@ class Social extends Controller
     public function createSocialView(Request $request)
     {
         $social = DB::table('social')->get();
-        return view('admin.social.create_social', ['social' => $social]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.social.create_social', ['social' => $social, 'socialNetworks' => $socialNetworks]);
     }
 
     public function createSocial(Request $request)

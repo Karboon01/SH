@@ -13,7 +13,8 @@ class Banners extends Controller
     public function admin_index(Request $request)
     {
         $banner = DB::table('banner')->get();
-        return view('admin.banner.index', ['banner' => $banner]);
+        $socialNetworks = DB::table('social')->get();
+        return view('admin.banner.index', ['banner' => $banner, 'socialNetworks' => $socialNetworks]);
     }
 
     // <--------------------BANNER-------------------->
@@ -22,8 +23,9 @@ class Banners extends Controller
     {
         $id = $request->id;
         $banner = DB::table('banner')->where('banner.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($banner)) {
-            return view('admin.banner.banner_edit', ['banner' => $banner]);
+            return view('admin.banner.banner_edit', ['banner' => $banner, 'socialNetworks' => $socialNetworks]);
         } else {
             return abort(404);
         }

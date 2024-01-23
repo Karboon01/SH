@@ -15,12 +15,14 @@ class Contact extends Controller
         $banner = DB::table('banner')->where('banner.page', 'contact')->get();
         $contacts = DB::table('contact_contacts')->get();
         $social = DB::table('social')->get();
-        return view('contact', ['banner' => $banner, 'contacts' => $contacts, 'social' => $social,]);
+        $socialNetworks = DB::table('social')->get();
+        return view('contact', ['banner' => $banner, 'contacts' => $contacts, 'social' => $social, 'socialNetworks' => $socialNetworks]);
     }
 
     public function admin_index(Request $request)
     {
         $contacts = DB::table('contact_contacts')->get();
+        $socialNetworks = DB::table('social')->get();
         return view('admin.contact.index', ['contacts' => $contacts]);
     }
 
@@ -30,6 +32,7 @@ class Contact extends Controller
     {
         $id = $request->id;
         $contacts = DB::table('contact_contacts')->where('contact_contacts.id', $id)->first();
+        $socialNetworks = DB::table('social')->get();
         if (!is_null($contacts)) {
             return view('admin.contact.contacts', ['contacts' => $contacts]);
         } else {
