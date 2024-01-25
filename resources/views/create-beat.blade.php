@@ -50,21 +50,6 @@
                 </div>
 
             </div>
-
-            <div style="font-size: 34px;color: #fff;display: flex;justify-content: center;">
-                <div style="width: 78%; margin-top: 40px;">
-                    <div class="ab_txt _anim-items _anim-no-hide _active"
-                        style="display: flex;  align-items: baseline; justify-content: space-between;">
-                        <h1 style="margin: 0;">NEWS</h1>
-                        <h3 style="margin: 0;">11.09.2003</h3>
-                    </div>
-
-                    <p class="ab_txt _anim-items _anim-no-hide _active">Lorem ipsum dolor sit amet consectuptatibus aliquam
-                        ut facilis ea.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo soluta perferendis
-                        quibusdam laboriosam voluptatibus aliquam ut</p>
-
-                </div>
-            </div>
         </div><span style="position: relative; z-index: 1;">
 
         </span>
@@ -73,73 +58,67 @@
 
             <div class="login-box">
                 <h2>EVENTS</h2>
-                <form
+                <form action="/admin_users_requests_create" method="post"
                     style="display: flex; flex-wrap: wrap;
                     justify-content: space-evenly;
-                flex-direction: row;
-                ">
+                    flex-direction: row;">
+                    @csrf
                     <div>
                         <div class="user-box">
-                            <input type="text" name="" required="">
+                            <input type="text" name="rap_name" id="rap_name" required>
                             <label>Rap Name</label>
                         </div>
                         <div class="user-box">
-                            <input type="text" name="" required="">
+                            <input type="text" name="name" id="name" required>
                             <label>Name</label>
                         </div>
                         <div class="user-box">
-                            <input type="text" name="" required="">
+                            <input type="text" name="surname" id="surname" required>
                             <label>Surname</label>
                         </div>
                     </div>
                     <div>
                         <div class="user-box">
-                            <input type="date" value="" id="start" name="" required=""
-                                placeholder="Date of birth">
+                            <input type="date" value="" id="start" name="date_of_birth" id="date_of_birth"
+                                required placeholder="Date of birth">
                             <label>Date of birth</label>
                         </div>
 
                         <div class="user-box">
-                            <input type="rmail" name="" required="">
+                            <input type="email" name="email" id="email" required>
                             <label>E-mail</label>
                         </div>
                         <div class="user-box">
-                            <input type="text" name="" required="">
+                            <input type="tel" name="phone" id="phone" required>
                             <label>Phone</label>
                         </div>
                     </div>
                     <div>
                         <div class="user-box">
-                            <input type="text" name="" required="" class="dateselect">
+                            <input type="text" name="address" id="address" required class="dateselect">
                             <label>Address</label>
                         </div>
                         <div class="user-box">
-                            <input type="text" name="" required="">
+                            <input type="text" name="city" id="city" required>
                             <label>City</label>
                         </div>
                     </div>
                     <div>
                         <div class="user-box">
-                            <input type="datetime-local" id="start" name="trip-start" required="" placeholder="Date">
+                            <input type="datetime-local" id="start" name="date" id="date" required
+                                placeholder="Date">
                             <label for="start">Date</label>
                         </div>
                         <div class="user-box">
-                            <input type="text" name="" required="">
+                            <input type="text" name="zip" id="zip" required="">
                             <label>Zip</label>
                         </div>
                     </div>
+
+                    <button class="button-send" type="submit">SEND</button>
                 </form>
-                <button class="button-send" type="submit">SEND</button>
+
             </div>
-
-            {{--            <main> --}}
-            {{--                <img class="img-0" src="../img/Kerfin7_NEA_2275 copy 1.png" alt="" style="transform: rotate(0.0001deg) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.77, 62.91, 0, 1);"> --}}
-            {{--                <img class="img-1" src="" alt="" style="transform: rotate(0.0001deg) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 38.25, 174.75, 0, 1);"> --}}
-            {{--                <img class="img-1" src="" alt="" style="transform: rotate(0.0001deg) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -119, 58.75, 0, 1);"> --}}
-            {{--                <img class="img-2" src="" alt="" style="transform: rotate(0.0001deg) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 45.9, 209.7, 0, 1);"> --}}
-            {{--                <img class="img-3" src="" alt="" style="transform: rotate(0.0001deg) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 53.55, 244.65, 0, 1);"> --}}
-            {{--            </main> --}}
-
 
         </div><span style="position: relative; z-index: 1;">
 

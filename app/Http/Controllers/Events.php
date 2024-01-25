@@ -10,14 +10,6 @@ class Events extends Controller
 
     // <--------------------INDEX-------------------->
 
-    public function index(Request $request)
-    {
-        $news = DB::table('events_news')->get();
-        $person = DB::table('events_person')->get();
-        $socialNetworks = DB::table('social')->get();
-        return view('events', ['news' => $news, 'person' => $person, 'socialNetworks' => $socialNetworks]);
-    }
-
     public function admin_index(Request $request)
     {
         $news = DB::table('events_news')->get();
@@ -155,18 +147,18 @@ class Events extends Controller
 
     public function editPerson(Request $request)
     {
-        $music = DB::table('events_person')->where('id', $request->id)->first();
+        $person = DB::table('events_person')->where('id', $request->id)->first();
 
-        $old_rap_name = $music->rap_name;
-        $old_name = $music->name;
-        $old_surname = $music->surname;
-        $old_date_of_birth = $music->date_of_birth;
-        $old_email = $music->email;
-        $old_phone = $music->phone;
-        $old_date = $music->date;
-        $old_zip = $music->zip;
-        $old_address = $music->address;
-        $old_city = $music->city;
+        $old_rap_name = $person->rap_name;
+        $old_name = $person->name;
+        $old_surname = $person->surname;
+        $old_date_of_birth = $person->date_of_birth;
+        $old_email = $person->email;
+        $old_phone = $person->phone;
+        $old_date = $person->date;
+        $old_zip = $person->zip;
+        $old_address = $person->address;
+        $old_city = $person->city;
 
 
         DB::table('events_person')
@@ -219,6 +211,25 @@ class Events extends Controller
         return redirect()->route('admin_events');
     }
 
+    public function createPerson(Request $request)
+    {
+        DB::table('events_person')->insert([
+            'rap_name' => $request->input('rap_name'),
+            'name' => $request->input('name'),
+            'surname' => $request->input('surname'),
+            'date_of_birth' => $request->input('date_of_birth'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'date' => $request->input('date'),
+            'zip' => $request->input('zip'),
+            'address' => $request->input('address'),
+            'city' => $request->input('city'),
+            'created_at' => DB::raw('CURRENT_TIMESTAMP'),
+        ]);
+
+        return redirect()->route('create-beat');
+    }
+    
     public function deletePerson(Request $request)
     {
         $person = DB::table('events_person')->where('id', $request->id)->first();
@@ -241,4 +252,5 @@ class Events extends Controller
         $person = DB::table('events_person')->where('id', $request->id)->delete();
         return redirect()->route('admin_events');
     }
+
 }

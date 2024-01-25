@@ -26,18 +26,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [Main::class, 'index']);
-Route::get('/contact', [Contact::class, 'index']);
-Route::get('/events', [Events::class, 'index']);
-Route::get('/label', [Label::class, 'index']);
-Route::get('/services', [Services::class, 'index']);
-Route::get('/studio', [Studio::class, 'index']);
-Route::get('/create-beat', [CreateBeatController::class, 'index']);
+Route::get('/', [Main::class, 'index'])->name('main');
+Route::get('/contact', [Contact::class, 'index'])->name('contact');
+Route::get('/label', [Label::class, 'index'])->name('label');
+Route::get('/services', [Services::class, 'index'])->name('services');
+Route::get('/studio', [Studio::class, 'index'])->name('studio');
+Route::get('/create-beat', [CreateBeatController::class, 'index'])->name('create-beat');
 
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::get('/events', [ProfileController::class, 'events'])->name('profile.events');
+    Route::get('/profile-events', [ProfileController::class, 'events'])->name('profile.events');
 });
 
 
@@ -68,6 +67,7 @@ Route::middleware(['auth','middleware' => 'is_admin'])->group(function () {
     Route::delete('/admin_events_news_delete/{id}', [Events::class, 'deleteNews']);
     Route::get('/admin_events_person/{id}', [Events::class, 'getPersonById']);
     Route::patch('/admin_events_person_edit/{id}', [Events::class, 'editPerson']);
+    Route::post('/admin_users_requests_create', [Events::class, 'createPerson']);
     Route::delete('/admin_events_person_delete/{id}', [Events::class, 'deletePerson']);
 
     // <--------------------LABEL-------------------->
@@ -127,6 +127,9 @@ Route::middleware(['auth','middleware' => 'is_admin'])->group(function () {
     Route::get('/admin_users/{id}', [Users::class, 'getUserById']);
     Route::patch('/admin_users_edit/{id}', [Users::class, 'editUser']);
     Route::delete('/admin_users_delete/{id}', [Users::class, 'deleteUser']);
+    Route::get('/admin_users_requests/{id}', [Users::class, 'getRequestById']);
+    Route::patch('/admin_users_requests_edit/{id}', [Users::class, 'editRequest']);
+    Route::delete('/admin_users_requests_delete/{id}', [Users::class, 'deleteRequest']);
 
     // <--------------------CHANGE LOG-------------------->
 

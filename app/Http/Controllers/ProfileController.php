@@ -17,15 +17,19 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
+        $socialNetworks = DB::table('social')->get();
+        
         return view('profile.edit', [
             'user' => $request->user(),
+            'socialNetworks' => $socialNetworks,
         ]);
     }
 
     public function events(Request $request)
     {
         $socialNetworks = DB::table('social')->get();
-        return view('profile.events', ['socialNetworks' => $socialNetworks]);
+        $requests = DB::table('requests')->get();
+        return view('profile.events', ['requests' => $requests, 'socialNetworks' => $socialNetworks]);
     }
 
     /**

@@ -5,7 +5,7 @@
             <h2 class="mt-[50px] text-5xl">NEWS</h2>
             <a href="/admin_events_news_create"
                 class="my-[25px] text-base mx-auto inline-block rounded bg-green-500 text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-green-600 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-green-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] active:bg-green-700 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] px-6 pb-2 pt-2.5 font-medium uppercase leading-normal transition duration-150 ease-in-out focus:outline-none focus:ring-0">
-                ADD EVENT
+                ADD NEWS
             </a>
             <thead class="uppercase tracking-wider">
                 <tr class="flex justify-between">
@@ -149,6 +149,6 @@
                     </tr>
                 @endforeach
             </tbody>
-        </table>
+        </table> 
     </div>
 @endsection

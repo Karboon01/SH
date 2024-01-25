@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 22 2024 г., 19:25
+-- Время создания: Янв 25 2024 г., 21:39
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.0.22
 
@@ -99,7 +99,12 @@ INSERT INTO `change_log` (`id`, `name`, `table`, `datetime`) VALUES
 (153, '<tr class=\"flex gap-5\"><td class=\"w-[75px]\">NAME</td><td>-</td><td class=\"break-normal text-balance w-[500px]\">123</td><td> => </td><td class=\"break-normal text-balance w-[500px]\">321</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[75px]\">IMAGE</td><td>-</td><td class=\"break-all text-balance w-[500px]\">123</td><td> => </td><td class=\"break-all text-balance w-[500px]\">321</td></tr>', 'MAIN - MUSIC - EDIT', '2024-01-21 19:17:55'),
 (154, '<tr class=\"flex gap-5\"><td class=\"w-[75px]\">NAME</td><td>-</td><td class=\"break-normal text-balance\">321</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[75px]\">IMAGE</td><td>-</td><td class=\"break-all text-balance\">321</td></tr>', 'MAIN - MUSIC - DELETE', '2024-01-21 19:17:57'),
 (155, '<tr class=\"flex gap-5\"><td class=\"w-[125px]\">NAME</td><td>-</td><td class=\"break-normal text-balance\">123</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">NAME</td><td>-</td><td class=\"break-all text-balance\">123</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">SURNAME</td><td>-</td><td class=\"break-all text-balance\">123</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">DATE OF BIRTH</td><td>-</td><td class=\"break-all text-balance\">2024-01-16</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">E-MAIL</td><td>-</td><td class=\"break-all text-balance\">123</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">PHONE</td><td>-</td><td class=\"break-all text-balance\">123</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">DATE</td><td>-</td><td class=\"break-all text-balance\">2024-01-17 23:22:46</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">ZIP</td><td>-</td><td class=\"break-all text-balance\">123</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">ADDRESS</td><td>-</td><td class=\"break-all text-balance\">123</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">CITY</td><td>-</td><td class=\"break-all text-balance\">123</td></tr>', 'EVENTS - PERSON - DELETE', '2024-01-21 19:23:37'),
-(156, '<tr class=\"flex gap-5\"><td class=\"w-[125px]\">HEADING</td><td>-</td><td class=\"break-normal text-balance\">SHREE RECORDS1</td><td> => </td><td class=\"break-normal text-balance\">SHREE RECORDS</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">BACKGROUND</td><td>-</td><td class=\"break-all text-balance\">Travis_scott.mp4</td><td> => </td><td class=\"break-all text-balance\">Travis_scott.mp4</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">PAGE</td><td>-</td><td class=\"break-all text-balance\">main</td><td> => </td><td class=\"break-all text-balance\">main</td></tr>', 'BANNERS - EDIT', '2024-01-22 14:20:24');
+(156, '<tr class=\"flex gap-5\"><td class=\"w-[125px]\">HEADING</td><td>-</td><td class=\"break-normal text-balance\">SHREE RECORDS1</td><td> => </td><td class=\"break-normal text-balance\">SHREE RECORDS</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">BACKGROUND</td><td>-</td><td class=\"break-all text-balance\">Travis_scott.mp4</td><td> => </td><td class=\"break-all text-balance\">Travis_scott.mp4</td></tr>\n            <tr class=\"flex gap-5\"><td class=\"w-[125px]\">PAGE</td><td>-</td><td class=\"break-all text-balance\">main</td><td> => </td><td class=\"break-all text-balance\">main</td></tr>', 'BANNERS - EDIT', '2024-01-22 14:20:24'),
+(157, '<tr class=\"flex gap-5\"><td>DATA</td><td>2024-01-25 18:25:56</td><td> => </td><td>2024-01-25T18:25:56</td></tr>\n            <tr class=\"flex gap-5\"><td>TEXT</td><td>Studio was rented</td><td> => </td><td>Studio was rented</td></tr>\n            <tr class=\"flex gap-5\"><td>PRICE</td><td>101</td><td> => </td><td>101</td></tr>', 'REQUEST - EDIT', '2024-01-25 17:58:30'),
+(158, '<tr class=\"flex gap-5\"><td>DATA</td><td>2024-01-25 18:25:56</td><td> => </td><td>2024-01-25T18:25:56</td></tr>\n            <tr class=\"flex gap-5\"><td>TEXT</td><td>Studio was rented</td><td> => </td><td>Studio was rented</td></tr>\n            <tr class=\"flex gap-5\"><td>PRICE</td><td>101</td><td> => </td><td>101</td></tr>', 'REQUEST - EDIT', '2024-01-25 17:58:37'),
+(159, '<tr class=\"flex gap-5\"><td>DATA</td><td>2024-01-25 18:25:56</td><td> => </td><td>2024-01-25T18:25:56</td></tr>\n            <tr class=\"flex gap-5\"><td>TEXT</td><td>Studio was rented</td><td> => </td><td>Studio was rented</td></tr>\n            <tr class=\"flex gap-5\"><td>PRICE</td><td>101</td><td> => </td><td>101</td></tr>', 'REQUEST - EDIT', '2024-01-25 18:01:18'),
+(160, '<tr class=\"flex gap-5\"><td>DATA</td><td>2024-01-25 18:25:56</td><td> => </td><td>2024-01-25T18:25:56</td></tr>\n            <tr class=\"flex gap-5\"><td>TEXT</td><td>Studio was rented</td><td> => </td><td>Studio was rented</td></tr>\n            <tr class=\"flex gap-5\"><td>PRICE</td><td>101</td><td> => </td><td>101</td></tr>', 'REQUEST - EDIT', '2024-01-25 18:01:48'),
+(161, '<tr class=\"flex gap-5\"><td>DATA</td><td>2024-01-25 18:25:56</td><td> => </td><td>2024-01-25T18:25:56</td></tr>\n            <tr class=\"flex gap-5\"><td>TEXT</td><td>Studio was rented</td><td> => </td><td>Studio was rented</td></tr>\n            <tr class=\"flex gap-5\"><td>PRICE</td><td>101</td><td> => </td><td>101123</td></tr>', 'REQUEST - EDIT', '2024-01-25 18:02:13');
 
 -- --------------------------------------------------------
 
@@ -152,7 +157,9 @@ CREATE TABLE `events_news` (
 
 INSERT INTO `events_news` (`id`, `heading`, `old_heading`, `descr`, `old_descr`, `image`, `old_image`, `data`, `old_data`, `created_at`, `updated_at`) VALUES
 (1, 'NEWS', 'NEWS', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo soluta perferendis quibusdam laboriosam voluptatibus aliquam ut', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo soluta perferendis quibusdam laboriosam voluptatibus aliquam ut', 'kD9twhD52Ow.jpg', 'kD9twhD52Ow.jpg', '2024-01-20', '2024-01-20', NULL, '2024-01-21 14:33:02'),
-(143, '123', NULL, '123', NULL, '123', NULL, '2024-01-12', NULL, '2024-01-21 19:09:45', NULL);
+(2, '123', NULL, '123', NULL, '123', NULL, '2024-01-04', NULL, NULL, NULL),
+(3, '123', NULL, '123', NULL, '123', NULL, '2024-01-15', NULL, NULL, NULL),
+(143, '123', NULL, '123', NULL, 'kD9twhD52Ow.jpg', NULL, '2024-01-12', NULL, '2024-01-21 19:09:45', NULL);
 
 -- --------------------------------------------------------
 
@@ -191,7 +198,8 @@ CREATE TABLE `events_person` (
 --
 
 INSERT INTO `events_person` (`id`, `rap_name`, `old_rap_name`, `name`, `old_name`, `surname`, `old_surname`, `date_of_birth`, `old_date_of_birth`, `email`, `old_email`, `phone`, `old_phone`, `date`, `old_date`, `zip`, `old_zip`, `address`, `old_address`, `city`, `old_city`, `created_at`, `updated_at`) VALUES
-(2, '321', NULL, '321', NULL, '321', NULL, '2024-01-17', NULL, '312', NULL, '312', NULL, '2024-01-10 23:04:42', NULL, '321', NULL, '321', NULL, '321', NULL, NULL, NULL);
+(2, '321', NULL, '321', NULL, '321', NULL, '2024-01-17', NULL, '312', NULL, '312', NULL, '2024-01-10 23:04:42', NULL, '321', NULL, '321', NULL, '321', NULL, NULL, NULL),
+(3, '12311', NULL, '4321', NULL, '3124', NULL, '0213-03-25', NULL, 'pavelata128@gmail.com', NULL, '+7 (937) 876 52 20', NULL, '2024-01-10 22:35:00', NULL, '2134', NULL, '1234', NULL, '1234', NULL, '2024-01-25 18:36:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -377,6 +385,35 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `requests`
+--
+
+CREATE TABLE `requests` (
+  `id` int UNSIGNED NOT NULL,
+  `data` datetime NOT NULL,
+  `old_data` datetime DEFAULT NULL,
+  `text` varchar(255) NOT NULL,
+  `old_text` varchar(255) DEFAULT NULL,
+  `price` int NOT NULL,
+  `old_price` int DEFAULT NULL,
+  `user_id` bigint UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `requests`
+--
+
+INSERT INTO `requests` (`id`, `data`, `old_data`, `text`, `old_text`, `price`, `old_price`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, '2024-01-25 18:25:56', '2024-01-25 18:25:56', 'Studio was rented', 'Studio was rented', 101123, 101, 2, NULL, '2024-01-25 15:02:13'),
+(2, '2024-01-25 18:26:35', NULL, 'Studio was rented', NULL, 1234, NULL, 2, NULL, NULL),
+(3, '2024-01-25 18:54:07', NULL, '123', NULL, 123, NULL, 2, NULL, NULL),
+(4, '2024-01-25 18:55:14', NULL, '1234', NULL, 1234, NULL, 2, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `services_cards`
 --
 
@@ -543,8 +580,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `old_name`, `email`, `old_email`, `email_verified_at`, `password`, `is_admin`, `old_is_admin`, `created_at`, `updated_at`) VALUES
-(3, '2222', '1111', '2222@gmail.com', '1111@gmail.com', NULL, '$2y$12$BPYrPzNWmawsZb2Xvi1RM.1V4CmouZB5fPeFXC/J0RzXhWpz1ZubC', 1, 1, '2024-01-19 16:35:55', '2024-01-21 15:54:34'),
-(4, '123', NULL, 'pavelata128@gmail.com', NULL, NULL, '$2y$12$lh59Q1oTwBDqs2H7X8VIWOd6Af07UJfLEGIqz/wAWGVHnhg1cbE1m', 1, NULL, '2024-01-22 10:17:52', '2024-01-22 10:17:52');
+(1, '2222', '1111', '2222@gmail.com', '1111@gmail.com', NULL, '$2y$12$BPYrPzNWmawsZb2Xvi1RM.1V4CmouZB5fPeFXC/J0RzXhWpz1ZubC', 1, 1, '2024-01-19 16:35:55', '2024-01-21 15:54:34'),
+(2, '123', NULL, 'pavelata128@gmail.com', NULL, NULL, '$2y$12$lh59Q1oTwBDqs2H7X8VIWOd6Af07UJfLEGIqz/wAWGVHnhg1cbE1m', 1, NULL, '2024-01-22 10:17:52', '2024-01-22 10:17:52');
 
 --
 -- Индексы сохранённых таблиц
@@ -626,6 +663,13 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Индексы таблицы `requests`
+--
+ALTER TABLE `requests`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Индексы таблицы `services_cards`
 --
 ALTER TABLE `services_cards`
@@ -676,7 +720,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT для таблицы `change_log`
 --
 ALTER TABLE `change_log`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
 -- AUTO_INCREMENT для таблицы `contact_contacts`
@@ -694,7 +738,7 @@ ALTER TABLE `events_news`
 -- AUTO_INCREMENT для таблицы `events_person`
 --
 ALTER TABLE `events_person`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `failed_jobs`
@@ -733,6 +777,12 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT для таблицы `requests`
+--
+ALTER TABLE `requests`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT для таблицы `services_cards`
 --
 ALTER TABLE `services_cards`
@@ -767,6 +817,16 @@ ALTER TABLE `studio_person`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `requests`
+--
+ALTER TABLE `requests`
+  ADD CONSTRAINT `requests_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

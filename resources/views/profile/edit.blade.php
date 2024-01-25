@@ -6,7 +6,7 @@
                 style="display: flex; flex-direction: column; height: 100%; width: 15%; justify-content: flex-start; align-items: center; font-size: 20px; ">
                 <a href="/profile" style="margin: 10px; color: #fff; text-decoration: none;">My account</a>
                 <hr style="width: 50%; margin: 0; border: 1px solid #fff; border-radius: 15px;">
-                <a href="/events" style="margin: 10px; color: #fff; text-decoration: none;">Events apply History</a>
+                <a href="/profile-events" style="margin: 10px; color: #fff; text-decoration: none;">Events apply History</a>
                 <form method="post" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit" style="margin: 10px; color: #fff; text-decoration: none; opacity: .5;">Log

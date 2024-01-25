@@ -26,217 +26,119 @@
                         <div class="main-slider swiper-container swiper-container-horizontal">
                             <div class="swiper-wrapper"
                                 style="transition-duration: 0ms;transform: translate3d(-480.667px, 0px, 0px);">
-                                <a class="swiper-slide swiper-slide-prev" style="width: 465.667px; margin-right: 15px;">
+                                {{-- <a class="swiper-slide swiper-slide-prev" style="width: 465.667px; margin-right: 15px;">
                                     <div class="block-slider sliderr swiper-container swiper-container-horizontal">
-
-
                                         <div style="display: flex; flex-direction: column; width: 100%; height: 100%;">
-                                            <div
-                                                style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
-                                                <div
-                                                    style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                                            @foreach ($requests as $index => $item)
+                                                @if ($index % 2 == 0)
                                                     <div
-                                                        style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
+                                                        style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
                                                         <div
-                                                            style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
+                                                            style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                                                            <div
+                                                                style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
+                                                                <div
+                                                                    style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
+                                                                </div>
+                                                            </div>
+
+                                                            <div style="font-size: 20px; text-align: center;">
+                                                                <p>{{ $item->data }}</p>
+                                                                <p>{{ $item->text }}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <b style="font-size: 24px;">{{ $item->price }}$</b>
                                                         </div>
                                                     </div>
-
-                                                    <div style="font-size: 20px; text-align: center;">
-                                                        <p>19.02.23 - 19:00</p>
-                                                        <p>Studio was rented</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <b style="font-size: 24px;">0.00$</b>
-                                                </div>
-                                            </div>
-
-
-                                            <div
-                                                style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
-                                                <div
-                                                    style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                                                    <div
-                                                        style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
+                                                    @if ($index + 1 < count($requests))
                                                         <div
-                                                            style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
+                                                            style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
+                                                            <div
+                                                                style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                                                                <div
+                                                                    style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
+                                                                    <div
+                                                                        style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div style="font-size: 20px; text-align: center;">
+                                                                    <p>{{ $requests[$index + 1]->data }}</p>
+                                                                    <p>{{ $requests[$index + 1]->text }}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <b style="font-size: 24px;">{{ $requests[$index + 1]->price }}$</b>
+                                                            </div>
                                                         </div>
-                                                    </div>
-
-                                                    <div style="font-size: 20px; text-align: center;">
-                                                        <p>19.02.23 - 19:00</p>
-                                                        <p>Studio was rented</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <b style="font-size: 24px;">0.00$</b>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-                                </a>
-                                <a class="swiper-slide swiper-slide-active" style="width: 465.667px; margin-right: 15px;">
-                                    <div class="block-slider swiper-container swiper-container-horizontal">
-
-                                        <div style="display: flex; flex-direction: column; width: 100%; height: 100%;">
-                                            <div
-                                                style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
-                                                <div
-                                                    style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                                                    <div
-                                                        style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
-                                                        <div
-                                                            style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="font-size: 20px; text-align: center;">
-                                                        <p>19.02.23 - 19:00</p>
-                                                        <p>Studio was rented</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <b style="font-size: 24px;">0.00$</b>
-                                                </div>
-                                            </div>
-
-
-                                            <div
-                                                style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
-                                                <div
-                                                    style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                                                    <div
-                                                        style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
-                                                        <div
-                                                            style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="font-size: 20px; text-align: center;">
-                                                        <p>19.02.23 - 19:00</p>
-                                                        <p>Studio was rented</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <b style="font-size: 24px;">0.00$</b>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </a>
-                                <a class="swiper-slide swiper-slide-next" style="width: 465.667px;margin-right: 15px;">
-                                    <div class="block-slider swiper-container swiper-container-horizontal">
-
-                                        <div style="display: flex; flex-direction: column; width: 100%; height: 100%;">
-                                            <div
-                                                style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
-                                                <div
-                                                    style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                                                    <div
-                                                        style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
-                                                        <div
-                                                            style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }});width: 40%;height: 90%;background-position: center;background-size: cover;">
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="font-size: 20px; text-align: center;">
-                                                        <p>19.02.23 - 19:00</p>
-                                                        <p>Studio was rented</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <b style="font-size: 24px;">0.00$</b>
-                                                </div>
-                                            </div>
-
-
-                                            <div
-                                                style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
-                                                <div
-                                                    style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                                                    <div
-                                                        style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
-                                                        <div
-                                                            style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="font-size: 20px; text-align: center;">
-                                                        <p>19.02.23 - 19:00</p>
-                                                        <p>Studio was rented</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <b style="font-size: 24px;">0.00$</b>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </a>
-                                <a class="swiper-slide" style="width: 465.667px; margin-right: 15px;">
-                                    <div class="block-slider swiper-container swiper-container-horizontal">
-
-                                        <div style="display: flex; flex-direction: column; width: 100%; height: 100%;">
-                                            <div
-                                                style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
-                                                <div
-                                                    style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                                                    <div
-                                                        style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
-                                                        <div
-                                                            style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="font-size: 20px; text-align: center;">
-                                                        <p>19.02.23 - 19:00</p>
-                                                        <p>Studio was rented</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <b style="font-size: 24px;">0.00$</b>
-                                                </div>
-                                            </div>
-
-
-                                            <div
-                                                style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%; ">
-                                                <div
-                                                    style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                                                    <div
-                                                        style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
-                                                        <div
-                                                            style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="font-size: 20px; text-align: center;">
-                                                        <p>19.02.23 - 19:00</p>
-                                                        <p>Studio was rented</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <b style="font-size: 24px;">0.00$</b>
-                                                </div>
-                                            </div>
+                                                    @endif
+                                                @endif
+                                            @endforeach
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="swiper-button-prev uploaded-in-prev"
-                                style="background-image: url({{ Vite::asset('resources/media/images/Vector_6.svg') }});">
-                            </div>
-                            <div class="swiper-button-next uploaded-in-next swiper-button-disabled"
-                                style="background-image: url({{ Vite::asset('resources/media/images/Vector_7.svg') }});">
+                                </a> --}}
+                                @foreach ($requests as $index => $item)
+                                    @if ($index % 2 == 0)
+                                        <a class="swiper-slide swiper-slide-prev"
+                                            style="width: 465.667px; margin-right: 15px;">
+                                            <div
+                                                style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%;">
+                                                <div
+                                                    style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                                                    <div
+                                                        style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
+                                                        <div
+                                                            style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div style="font-size: 20px; text-align: center;">
+                                                        <p>{{ $item->data }}</p>
+                                                        <p>{{ $item->text }}</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <b style="font-size: 24px;">{{ $item->price }}$</b>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        @if ($index + 1 < count($requests))
+                                            <a class="swiper-slide swiper-slide-prev"
+                                                style="width: 465.667px; margin-right: 15px;">
+                                                <div
+                                                    style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 100%; height: 100%;">
+                                                    <div
+                                                        style="width: 80%; height: 90%; border: 2px solid #000000; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                                                        <div
+                                                            style="background: url({{ Vite::asset('resources/media/images/1633809799_109-p-domashnyaya-studiya-zvukozapisi-foto-123_1.png') }}); background-position: center; background-size: cover; width: 90%; height: 60%; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
+                                                            <div
+                                                                style="background-image: url({{ Vite::asset('resources/media/images/logo/SHREE.svg') }}); width: 40%; height: 90%; background-position: center; background-size: cover;">
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="font-size: 20px; text-align: center;">
+                                                            <p>{{ $requests[$index + 1]->data }}</p>
+                                                            <p>{{ $requests[$index + 1]->text }}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <b style="font-size: 24px;">{{ $requests[$index + 1]->price }}$</b>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        @endif
+                                    @endif
+                                @endforeach
+
                             </div>
                         </div>
-
+                        <div class="swiper-button-prev uploaded-in-prev"
+                            style="background-image: url({{ Vite::asset('resources/media/images/Vector_6.svg') }});">
+                        </div>
+                        <div class="swiper-button-next uploaded-in-next swiper-button-disabled"
+                            style="background-image: url({{ Vite::asset('resources/media/images/Vector_7.svg') }});">
+                        </div>
                     </div>
                 </div>
             </div>
